@@ -126,14 +126,6 @@ while True:
                 processing = False
             
 
-            # Pause----------------------
-            stop = pause(x)
-            if stop:
-                print("PAUSE")
-                processing = True
-                set_servo("pause")
-                processing = False
-
             # Wave----------------------
             waving = wave(x)
             if waving:
@@ -151,8 +143,8 @@ while True:
                 processing = False
 
             # dab----------------------
-            dab = dab(x)
-            if dab:
+            dabbing = dab(x)
+            if dabbing:
                 print("DABBING")
                 processing = True
                 set_servo("dab")
