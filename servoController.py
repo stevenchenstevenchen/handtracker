@@ -66,6 +66,7 @@ def set_servo(emote):
     try:
         if arduino is not None and arduino.is_open:
             arduino.write(cmd.encode())
+            time.sleep(5)
             print(f"Sent to Arduino: {cmd.strip()}")
         else:
             print("⚠️ Arduino is not connected.")
