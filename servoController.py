@@ -1,6 +1,6 @@
 import cv2
 from collections import Counter
-from module import findnameoflandmark, findpostion, pause, speak, rockstar
+from module import findnameoflandmark, findpostion, pause, speak, rockstar, wave, tailWag, dab
 import serial
 import time
 import serial.tools.list_ports
@@ -133,6 +133,32 @@ while True:
                 processing = True
                 set_servo("pause")
                 processing = False
+
+            # Wave----------------------
+            waving = wave(x)
+            if waving:
+                print("WAVE")
+                processing = True
+                set_servo("wave")
+                processing = False
+
+            # tailWag----------------------
+            wag = tailWag(x)
+            if wag:
+                print("WAGGING")
+                processing = True
+                set_servo("tailWag")
+                processing = False
+
+            # dab----------------------
+            dab = dab(x)
+            if dab:
+                print("DABBING")
+                processing = True
+                set_servo("dab")
+                processing = False
+            
+
 
     cv2.imshow("Frame", frame1)
     key = cv2.waitKey(1) & 0xFF

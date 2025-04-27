@@ -64,6 +64,33 @@ def pause(fingers):
     print("False")
     return False
 
+#check wave 🖐 everything up
+def wave(fingers):
+    #fingers [index, middle, ring, pinkies, thumb]
+    if fingers and fingers[0] == 1 and fingers[3] == 1 and fingers[4] == 1 and fingers[2] == 1 and fingers[1] == 1:
+        print("True")
+        return True
+    print("False")
+    return False
+
+#check tailWag 👉 Gun sign
+def tailWag(fingers):
+    #fingers [index, middle, ring, pinkies, thumb]
+    if fingers and fingers[0] == 1 and fingers[3] == 0 and fingers[4] == 1 and fingers[2] == 0 and fingers[1] == 0:
+        print("True")
+        return True
+    print("False")
+    return False
+
+#check dab 🤙 sign
+def dab(fingers):
+    #fingers [index, middle, ring, pinkies, thumb]
+    if fingers and fingers[0] == 0 and fingers[3] == 1 and fingers[4] == 1 and fingers[2] == 0 and fingers[1] == 0:
+        print("True")
+        return True
+    print("False")
+    return False
+
 
 def findnameoflandmark(frame1):
      """
